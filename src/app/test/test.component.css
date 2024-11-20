@@ -1,0 +1,19 @@
+
+
+.image-container {
+    position: absolute;
+    height: 500px;
+    border-radius:5px;
+
+    top: 0%; 
+    left: 50%;
+    transform: translateX(50%);
+    
+}
+
+.image-container img{
+    
+
+    border-radius:10px;
+       
+   }

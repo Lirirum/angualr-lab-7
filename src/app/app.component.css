@@ -1,7 +1,7 @@
 
 
 .wrapper{
-    background-image:  url("../assets/images/background/winter3.jpg"); 
+    background-image:url("../assets/images/background/village-winter-night.gif");
     background-repeat: repeat-y;
     background-size: cover;
     background-position: center; 
@@ -31,7 +31,7 @@ header {
 nav.main_nav  {
   
     text-align: center;
-    background-color: #333;
+    background-color: #362f4d;
     padding: 10px 0;
    
 }
@@ -42,11 +42,12 @@ nav.main_nav  a {
     margin: 0 15px;
     font-size: 1.2rem;
     padding: 5px 10px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 nav.main_nav  a:hover {
-    background-color: #575757;
+    background-color: #504673;
     border-radius: 5px;
 }
 
@@ -56,11 +57,24 @@ h1 {
 }
 
 footer {
-    background-color: #333;
+    background-color:  #362f4d;
     color: white;
     padding: 10px 0;
     text-align: center;
    
  
    
+}
+
+
+.blue-btn{
+    background: radial-gradient(circle at 85.4% 50.8%, rgb(14, 72, 222) 0%, rgb(3, 22, 65) 74.2%);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+
 }
