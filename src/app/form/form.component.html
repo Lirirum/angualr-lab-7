@@ -1,0 +1,67 @@
+<div class="form-container">
+    <form [formGroup]="form">
+      <div formGroupName="userInfo" class="blockInfo">
+        <label for="firstName">First Name:</label>
+        <input id="firstName" formControlName="firstName" />
+        <div class="form-error" *ngIf="form.get('userInfo.firstName')?.invalid && form.get('userInfo.firstName')?.touched">
+          <p *ngIf="form.get('userInfo.firstName')?.hasError('required')">First name is required</p>
+          <p *ngIf="form.get('userInfo.firstName')?.hasError('minlength')">First name must be at least 3 characters long</p>
+        </div>
+  
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" formControlName="lastName" />
+        <div class="form-error" *ngIf="form.get('userInfo.lastName')?.invalid && form.get('userInfo.lastName')?.touched">
+          <p *ngIf="form.get('userInfo.lastName')?.hasError('required')">Last name is required</p>
+          <p *ngIf="form.get('userInfo.lastName')?.hasError('minlength')">Last name must be at least 3 characters long</p>
+        </div>
+      </div>
+  
+      <div formGroupName="contactInfo" class="blockInfo">
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" />
+        <div class="form-error" *ngIf="form.get('contactInfo.email')?.invalid && form.get('contactInfo.email')?.touched">
+          <p *ngIf="form.get('contactInfo.email')?.hasError('required')">Email is required</p>
+          <p *ngIf="form.get('contactInfo.email')?.hasError('email')">Invalid email format</p>
+        </div>
+  
+        <label for="phone">Phone:</label>
+        <input id="phone" formControlName="phone" />
+        <div class="form-error" *ngIf="form.get('contactInfo.phone')?.invalid && form.get('contactInfo.phone')?.touched">
+          <p *ngIf="form.get('contactInfo.phone')?.hasError('required')">Phone is required</p>
+          <p *ngIf="form.get('contactInfo.phone')?.hasError('pattern')">Phone number must be 10 digits</p>
+        </div>
+      </div>
+      <button type="button" (click)="updateForm()">Update Form</button>
+    </form>
+  
+    <div class="form-values">
+        <h3>Form Values:</h3>
+        <table cellspacing="0" cellpadding="5">
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>First Name</td>
+              <td>{{ form.get('userInfo.firstName')?.value }}</td>
+            </tr>
+            <tr>
+              <td>Last Name</td>
+              <td>{{ form.get('userInfo.lastName')?.value }}</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>{{ form.get('contactInfo.email')?.value }}</td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td>{{ form.get('contactInfo.phone')?.value }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  

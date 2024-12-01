@@ -8,9 +8,13 @@ import {AppParentComponent } from "./parent-component/parent-component.component
 import {CountdownComponent } from "./countdown/countdown.component";
 import {InfoComponent } from "./info/info.component";
 import {TestComponent } from "./test/test.component";
+import {FormComponent } from "./form/form.component";
+import { DataContainerComponent } from './data-container/data-container.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 export const routes: Routes = [
-    { path: "", component: HomeComponent},
+    { path: "",  redirectTo: 'home', pathMatch: 'full' }, 
+    { path: "home", component: HomeComponent},
     { path: "about", component: AboutComponent},
     { path: "secret", component: SecretComponent},
     { path: "carousel", component: CarouselComponent},
@@ -18,4 +22,7 @@ export const routes: Routes = [
     { path: "countdown", component: CountdownComponent},
     { path: "info", component: InfoComponent},
     { path: "test", component: TestComponent},
+    { path: "form", component: FormComponent },
+    { path: "data", component: DataContainerComponent  },
+    { path: '**', component: NotFoundComponent }, 
 ];
