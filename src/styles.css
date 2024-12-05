@@ -142,3 +142,5 @@ select {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

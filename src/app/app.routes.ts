@@ -11,6 +11,9 @@ import {TestComponent } from "./test/test.component";
 import {FormComponent } from "./form/form.component";
 import { DataContainerComponent } from './data-container/data-container.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {FirstComponent } from './first/first.component'
+import { ReceiverComponent } from './receiver/receiver.component';
+import { TableComponent } from './table/table.component';
 
 export const routes: Routes = [
     { path: "",  redirectTo: 'home', pathMatch: 'full' }, 
@@ -24,5 +27,8 @@ export const routes: Routes = [
     { path: "test", component: TestComponent},
     { path: "form", component: FormComponent },
     { path: "data", component: DataContainerComponent  },
+    { path: "first", component:FirstComponent  },
+    { path: "second", component: ReceiverComponent  },
+    { path: "table", component: TableComponent  },
     { path: '**', component: NotFoundComponent }, 
 ];
